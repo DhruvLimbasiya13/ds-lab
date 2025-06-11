@@ -22,7 +22,7 @@ void main()
 
         if (a[i]<min)
         {
-            min=a[i];
+            min=i;
         }
         
     }
