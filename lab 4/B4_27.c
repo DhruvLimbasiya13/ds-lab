@@ -5,7 +5,7 @@ void main(){
     printf("Enter the length of the array: ");
     scanf("%d", &length_of_array);
 
-    int array[length_of_array + 1];
+    int array[length_of_array];
     
     for(int i = 0; i < length_of_array; i++) {
         printf("Enter element %d: ", i + 1);
