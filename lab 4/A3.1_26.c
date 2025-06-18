@@ -29,8 +29,8 @@ void main(){
     }
 
     for(int j = length_of_array; j > index;j--) {
-                array[j] = array[j - 1];
-            }
+        array[j] = array[j - 1];
+    }
     
     array[index] = value;
 
