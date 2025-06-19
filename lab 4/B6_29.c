@@ -4,7 +4,7 @@ void main(){
     printf("enter the number of elements you want :");
     scanf("%d",&length_of_array);
 
-    int first_array[length_of_array] , second_array[length_of_array], third_array[length_of_array+length_of_array];
+    int first_array[length_of_array] , second_array[length_of_array], third_array[2*length_of_array];
 
     //scaning array
     for (int i = 0; i < length_of_array; i++)
