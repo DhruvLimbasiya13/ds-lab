@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int length_of_array, temp;
     int *ptr;
 

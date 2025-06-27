@@ -1,17 +1,14 @@
 #include <stdio.h>
-
-int main() {
+#include<string.h>
+void main() {
     char str[100];
     char *start, *end;
-    int length = 0;
 
     printf("Enter a word: ");
-    scanf("%s", str); // reads a single word
+    scanf("%s", str);
 
     // Count length of string
-    while(str[length] != '\0') {
-        length++;
-    }
+    int length = strlen(str);
 
     start = str;               // points to first character
     end = str + length - 1;    // points to last character

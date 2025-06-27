@@ -22,7 +22,7 @@ void main(){
     }
 
     //generate random number between number of words
-    int random_number=rand()%(number_of_words);
+    int random_number=rand()%number_of_words;
 
     printf("random number : %d \n",random_number);
     printf("random word : %s\n" , words[random_number]);
