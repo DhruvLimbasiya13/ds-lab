@@ -1,5 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+
+void menu();
+void InsertAtFirst(int x);
+void InsertAtLast(int x);
+void DisplayAllNodes();
+void DeleteFirstNode();
+void DeleteAtLast();
+void DeleteAtSpecifiedPosition(int Position);
+void Count();
+
 struct node
 {
     int info;
@@ -7,59 +18,6 @@ struct node
 }; // struct
 
 struct node *first = NULL;
-
-void menu()
-{
-    printf("1.Insert a node at the front of the linked list. \n2. Display all nodes.\n3. Delete a first node of the linked list.\n4. Insert a node at the end of the linked list.\n5. Delete a last node of the linked list.\n6. Delete a node from specified position.\n7.count the number of Node\n8. exit\n Enter your Choice");
-    int choice;
-    scanf("%d", &choice);
-    int x;
-    switch (choice)
-    {
-    case 1:
-        printf("enter the info of new Node :\n");
-
-        scanf("%d", &x);
-        InsertAtFirst(x);
-        break;
-
-    case 2:
-        DisplayAllNodes();
-        break;
-
-    case 3:
-        DeleteFirstNode();
-        break;
-
-    case 4:
-        printf("enter the info of new Node :\n");
-        scanf("%d", &x);
-        InsertAtLast(x);
-        break;
-
-    case 5:
-        DeleteAtLast();
-        break;
-
-    case 6:
-        printf("Enter the position of Node you want to Delete :");
-        int position;
-        scanf("%d", &position);
-        DeleteAtSpecifiedPosition(position);
-        break;
-
-    case 7:
-        Count();
-        break;
-
-    case 8 :
-        exit(0);
-    default:
-        printf("please enter the valid number .");
-        break;
-    }//switch
-}//menu
-
 
 void InsertAtFirst(int x)
 {
@@ -150,7 +108,7 @@ void DisplayAllNodes()
     {
         struct node *save = first;
         int i = 1;
-        while (save->link != NULL)
+        while (save != NULL)
         {
             printf("value of Node %d : %d\n", i, save->info);
             save = save->link;
@@ -301,7 +259,60 @@ void Count()
         } // while
         printf("number of nodes : %d", i);
     } // else
-}
+}//count
+
+void menu()
+{
+    printf("1.Insert a node at the front of the linked list. \n2. Display all nodes.\n3. Delete a first node of the linked list.\n4. Insert a node at the end of the linked list.\n5. Delete a last node of the linked list.\n6. Delete a node from specified position.\n7.count the number of Node\n8. exit\n Enter your Choice");
+    int choice;
+    scanf("%d", &choice);
+    int x;
+    switch (choice)
+    {
+    case 1:
+        printf("enter the info of new Node :\n");
+
+        scanf("%d", &x);
+        InsertAtFirst(x);
+        break;
+
+    case 2:
+        DisplayAllNodes();
+        break;
+
+    case 3:
+        DeleteFirstNode();
+        break;
+
+    case 4:
+        printf("enter the info of new Node :\n");
+        scanf("%d", &x);
+        InsertAtLast(x);
+        break;
+
+    case 5:
+        DeleteAtLast();
+        break;
+
+    case 6:
+        printf("Enter the position of Node you want to Delete :");
+        int position;
+        scanf("%d", &position);
+        DeleteAtSpecifiedPosition(position);
+        break;
+
+    case 7:
+        Count();
+        break;
+
+    case 8 :
+        exit(0);
+    default:
+        printf("please enter the valid number .");
+        break;
+    }//switch
+}//menu
+
 void main()
 {
     menu();
