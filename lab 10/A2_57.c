@@ -183,7 +183,6 @@ void DeleteAtLast()
 
         free(save);
 
-        printf("Info of first Node : %d\n", first->info);
     } // else
 
     printf("1. Go to back menu \n2. exit");
