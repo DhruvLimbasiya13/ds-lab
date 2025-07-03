@@ -83,7 +83,7 @@ void CreateNewList(){
 }
 
 void menu(){
-    printf("\n1.enter new node\n2.display\n3.copy into new link list\n4.exist\n");
+    printf("\n1.enter new node\n2.display\n3.copy into new link list\n4.exit\n");
     int choice;
     scanf("%d",&choice);
     switch (choice)

@@ -45,7 +45,7 @@ void Check(){
     }//if
     else if (count == 0)
     {
-        printf("\nno link list exist.\n");
+        printf("\nno link list doesn't exist.\n");
     }//else if
     else{
         struct node *save1 = first1;
