@@ -89,7 +89,7 @@ void main()
                 exit(0);
                 break;
 
-            default:printf("")
+            default:printf("");
 		}
 	}
 }

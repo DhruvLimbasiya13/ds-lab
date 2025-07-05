@@ -7,7 +7,8 @@ struct node{
 
 struct node *first1 = NULL ;
 struct node *first2 = NULL ;
-int count = 0;
+int count1 = 0;
+int count2 = 0;
 
 struct node * InsertNewNode(struct node * temp){
     struct node *newNode = (struct node *)malloc(sizeof(struct node));
@@ -34,19 +35,15 @@ struct node * InsertNewNode(struct node * temp){
         newNode->link = NULL;
 
     } // else
-    count++;
+    
     return temp;
 }//insert new node
 
 void Check(){
-    if (count%2!=0)
+    if ((count1==0) ||(count2==0)|| (count1 != count2))
     {
-        printf("\nlink lists are not same.\n");
+        printf("\nlink lists are not same or empty\n");
     }//if
-    else if (count == 0)
-    {
-        printf("\nno link list doesn't exist.\n");
-    }//else if
     else{
         struct node *save1 = first1;
         struct node *save2 = first2;
@@ -101,6 +98,7 @@ void Display(){
             {
                 printf("value of Node %d : %d\n", i, save2->info);
                 save2 = save2 -> link;
+                i++;
             }//while
         }
         else{
@@ -116,10 +114,12 @@ void main(){
         {
         case 1:
             first1 = InsertNewNode(first1);
+            count1++;
             break;
 
         case 2:
             first2 = InsertNewNode(first2);
+            count2++;
             break;
 
         case 3:

@@ -306,6 +306,7 @@ void menu()
 
     case 8 :
         exit(0);
+        break;
     default:
         printf("please enter the valid number .");
         break;
