@@ -7,8 +7,8 @@ struct node
     struct node *link;
 };
 
-struct node *first1 = NULL;
-struct node *first2 = NULL;
+struct node *first1 = NULL;//normal
+struct node *first2 = NULL;//copy
 
 void InsertNewNode()
 {
@@ -106,7 +106,7 @@ void CreateNewList()
             save = save -> link ;
         } // while
     } // else
-}
+}//copy
 
 void main()
 {

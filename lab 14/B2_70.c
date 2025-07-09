@@ -74,7 +74,7 @@ void SplitList()
         {
             pred = save ;
             save = save -> link ;
-            temp -- ;
+            temp-- ;
         }
         first2 = save ;
         pred -> link = first1;
@@ -90,7 +90,7 @@ void SplitList()
         
     } // while
     printf("\nsplit successfully.\n");
-} // delete node
+} // split node
 
 void display()
 {

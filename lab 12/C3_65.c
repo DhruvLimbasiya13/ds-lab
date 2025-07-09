@@ -108,7 +108,7 @@ void replaceNode()
     for (int i = 1; i < fromFront; i++)
     {
         front = front->link;
-    } // for
+    }// for
 
     struct node *end = first;
     for (int i = 1; i < fromEnd; i++)
