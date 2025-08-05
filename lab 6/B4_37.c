@@ -38,7 +38,7 @@ int isBalanced(char *s)
 int main()
 {
     int T;
-    printf("enter the total input tu want :");
+    printf("enter the total input you want :");
     scanf("%d", &T);
 
     while (T--)
